@@ -7,7 +7,7 @@ const { Routes } = require('discord-api-types/v9');
 
 const commands = [{
   name: 'ping',
-  description: 'Replies with Pong!'
+  description: 'Replies with Pong!',
 }]; 
 
 const rest = new REST({ version: '9' }).setToken(TOKEN);
@@ -29,6 +29,7 @@ const rest = new REST({ version: '9' }).setToken(TOKEN);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setActivity("Server Steart", {type: "WATCHING"})
 });
 
 client.on('interactionCreate', async interaction => {
