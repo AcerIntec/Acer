@@ -29,7 +29,7 @@ const rest = new REST({ version: '9' }).setToken(TOKEN);
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity("Server Steart", {type: "WATCHING"})
+  //client.user.setActivity("Server Steart", {type: "WATCHING"})
 });
 
 client.on('interactionCreate', async interaction => {
